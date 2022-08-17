@@ -1900,3 +1900,9 @@ Received Import Request.
   path: Assets/Materials/goal.mat
   artifactKey: Guid(803f097820c07a845b156732a12fb8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Materials/goal.mat using Guid(803f097820c07a845b156732a12fb8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99cf0ff62de3bd5c54466c004f8d488b') in 0.019914 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 46.783224 seconds.
+  path: Assets/Scripts/PlayerController.cs
+  artifactKey: Guid(2e3b3614c2b7a294d99e8657cee2d6bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/PlayerController.cs using Guid(2e3b3614c2b7a294d99e8657cee2d6bc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '015b7199b4ce3a88b211f4f86c9e906b') in 0.005678 seconds 
