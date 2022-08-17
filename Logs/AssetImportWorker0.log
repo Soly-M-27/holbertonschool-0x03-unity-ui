@@ -1824,3 +1824,79 @@ Received Import Request.
   path: Assets/Prefabs/Trap.prefab
   artifactKey: Guid(68047c4249c7c2242b20e0265505c333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Prefabs/Trap.prefab using Guid(68047c4249c7c2242b20e0265505c333) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daaccce52413305de023b937724ef170') in 0.070796 seconds 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.005669 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for LinuxStandalone target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.207 seconds
+Domain Reload Profiling:
+	ReloadAssembly (1207ms)
+		BeginReloadAssembly (154ms)
+			ExecutionOrderSort (0ms)
+			DisableScriptedObjects (6ms)
+			BackupInstance (0ms)
+			ReleaseScriptingObjects (0ms)
+			CreateAndSetChildDomain (45ms)
+		EndReloadAssembly (995ms)
+			LoadAssemblies (129ms)
+			RebuildTransferFunctionScriptingTraits (0ms)
+			SetupTypeCache (315ms)
+			ReleaseScriptCaches (1ms)
+			RebuildScriptCaches (46ms)
+			SetupLoadedEditorAssemblies (393ms)
+				LogAssemblyErrors (0ms)
+				InitializePlatformSupportModulesInManaged (8ms)
+				SetLoadedEditorAssemblies (1ms)
+				RefreshPlugins (1ms)
+				BeforeProcessingInitializeOnLoad (104ms)
+				ProcessInitializeOnLoadAttributes (195ms)
+				ProcessInitializeOnLoadMethodAttributes (76ms)
+				AfterProcessingInitializeOnLoad (8ms)
+				EditorAssembliesLoaded (1ms)
+			ExecutionOrderSort2 (0ms)
+			AwakeInstancesAfterBackupRestoration (4ms)
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.88 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2371 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 95.7 MB.
+System memory in use after: 95.9 MB.
+
+Unloading 51 unused Assets to reduce memory usage. Loaded Objects now: 2905.
+Total: 6.053900 ms (FindLiveObjects: 0.147800 ms CreateObjectMapping: 0.067200 ms MarkObjects: 5.788000 ms  DeleteObjects: 0.049400 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:framework-win-MediaFoundation: 216162199b28c13a410421893ffa2e32 -> 
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 345.794594 seconds.
+  path: ProjectSettings/TagManager.asset
+  artifactKey: Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing ProjectSettings/TagManager.asset using Guid(00000000000000003000000000000000) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd4d1556387cd05c4fd539cd0458aee5') in 0.022879 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 52.478983 seconds.
+  path: Assets/Materials/goal.mat
+  artifactKey: Guid(803f097820c07a845b156732a12fb8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/goal.mat using Guid(803f097820c07a845b156732a12fb8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a8e45b359a49551b5a11e5d69be8b370') in 0.066121 seconds 
+========================================================================
+Received Import Request.
+  Time since last request: 29.508745 seconds.
+  path: Assets/Materials/goal.mat
+  artifactKey: Guid(803f097820c07a845b156732a12fb8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/goal.mat using Guid(803f097820c07a845b156732a12fb8a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99cf0ff62de3bd5c54466c004f8d488b') in 0.019914 seconds 
