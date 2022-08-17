@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public int health = 5;
     public float speed = 1.0f;
     public Vector3 movement;
     public Rigidbody rb;
@@ -44,6 +45,12 @@ public class PlayerController : MonoBehaviour
             Destroy(other.gameObject);
             score++;
             Debug.Log($"Score: {score}");
+        }
+
+        if (other.gameObject.CompareTag("Trap"))
+        {
+            health--;
+            Debug.Log($"Health: {health}");
         }
     }
 }
