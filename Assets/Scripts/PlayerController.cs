@@ -14,6 +14,8 @@ public class PlayerController : MonoBehaviour
     private int score = 0;
     public Text scoreText;
     public Text healthText;
+    public GameObject WLBar;
+    public Text WinLoseText;
 
     // Start is called before the first frame update
     void Start()
@@ -26,10 +28,13 @@ public class PlayerController : MonoBehaviour
     {
         if (health == 0)
         {
-            Debug.Log("Game Over!");
             health = 5;
             score = 0;
-            SceneManager.LoadScene("maze");
+            WLBar.SetActive(true);   
+            WLBar.GetComponent<Image>().color = Color.red;
+            WinLoseText.GetComponent<Text>().color = Color.white;
+            WinLoseText.text = "Game Over!";     
+            StartCoroutine(LoadScene(3));
         }
 
         if (Input.GetKey(KeyCode.A))
@@ -70,7 +75,11 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Goal"))
         {
-            Debug.Log("You win!");
+            WLBar.SetActive(true);   
+            WLBar.GetComponent<Image>().color = Color.green;
+            WinLoseText.GetComponent<Text>().color = Color.black;
+            WinLoseText.text = "You Win!";
+            StartCoroutine(LoadScene(3));    
         }
     }
 
@@ -86,6 +95,12 @@ public class PlayerController : MonoBehaviour
     {
         health--;
         healthText.text = "Health: " + health;
+    }
+
+    IEnumerator LoadScene(float seconds)
+    {
+        yield return new WaitForSeconds(seconds);
+        SceneManager.LoadScene("maze");
     }
 
 }
