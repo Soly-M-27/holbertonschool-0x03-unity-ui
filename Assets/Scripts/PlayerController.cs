@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 
 public class PlayerController : MonoBehaviour
@@ -11,6 +12,7 @@ public class PlayerController : MonoBehaviour
     public Vector3 movement;
     public Rigidbody rb;
     private int score = 0;
+    public Text scoreText;
 
     // Start is called before the first frame update
     void Start()
@@ -30,22 +32,25 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Input.GetKey(KeyCode.A))
-            rb.AddForce(Vector3.left);
+            rb.AddForce(Vector3.left * speed);
         if (Input.GetKey(KeyCode.D))
-            rb.AddForce(Vector3.right);
+            rb.AddForce(Vector3.right * speed);
         if (Input.GetKey(KeyCode.W))
-            rb.AddForce(Vector3.forward);
+            rb.AddForce(Vector3.forward * speed);
         if (Input.GetKey(KeyCode.S))
-            rb.AddForce(Vector3.back);
+            rb.AddForce(Vector3.back * speed);
 
-        movement.x = Input.GetAxisRaw("Horizontal");
-        movement.z = Input.GetAxisRaw("Vertical");
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        if (Input.GetKey("up") || Input.GetKey("down") || Input.GetKey("left") || Input.GetKey("right"))
+        {
+            movement.x = Input.GetAxisRaw("Horizontal");
+            movement.z = Input.GetAxisRaw("Vertical");
+            rb.MovePosition(rb.position + movement * speed * Time.fixedDeltaTime);
+        }
     }
 
     void OnTriggerEnter(Collider other)
@@ -53,8 +58,7 @@ public class PlayerController : MonoBehaviour
         if (other.gameObject.CompareTag("Pickup"))
         {
             Destroy(other.gameObject);
-            score++;
-            Debug.Log($"Score: {score}");
+            SetScoreText();
         }
 
         if (other.gameObject.CompareTag("Trap"))
@@ -67,5 +71,11 @@ public class PlayerController : MonoBehaviour
         {
             Debug.Log("You win!");
         }
+    }
+
+    void SetScoreText()
+    {
+        score++;
+        scoreText.text = "Score :" + score;
     }
 }
