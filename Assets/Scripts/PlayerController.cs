@@ -13,6 +13,7 @@ public class PlayerController : MonoBehaviour
     public Rigidbody rb;
     private int score = 0;
     public Text scoreText;
+    public Text healthText;
 
     // Start is called before the first frame update
     void Start()
@@ -53,6 +54,7 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    //Trigger Colliders, Destroy, Compare, etc.
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Pickup"))
@@ -63,8 +65,7 @@ public class PlayerController : MonoBehaviour
 
         if (other.gameObject.CompareTag("Trap"))
         {
-            health--;
-            Debug.Log($"Health: {health}");
+            SetHealthText();
         }
 
         if (other.gameObject.CompareTag("Goal"))
@@ -73,9 +74,18 @@ public class PlayerController : MonoBehaviour
         }
     }
 
+    // Player score
     void SetScoreText()
     {
         score++;
         scoreText.text = "Score :" + score;
     }
+
+    // Player Health
+    void SetHealthText()
+    {
+        health--;
+        healthText.text = "Health: " + health;
+    }
+
 }
