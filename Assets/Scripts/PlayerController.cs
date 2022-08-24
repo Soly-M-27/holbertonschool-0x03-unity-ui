@@ -7,14 +7,23 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
+    //Total Health at start
     public int health = 5;
+    // public speed var can be changed at any moment for testing
     public float speed = 1.0f;
+    // Vector3 limits for 3D objects Rigidbody movements
     public Vector3 movement;
+    // Rigidbody
     public Rigidbody rb;
+    // Holds starting score
     private int score = 0;
+    // Holds current score
     public Text scoreText;
+    // Holds current health points
     public Text healthText;
+    // Contains Bar to hold text for winner/loser msgs
     public GameObject WLBar;
+    //Text for if player won or lost the game
     public Text WinLoseText;
 
     // Start is called before the first frame update
@@ -26,6 +35,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            SceneManager.LoadScene("menu");
+        }
+
         if (health == 0)
         {
             health = 5;
@@ -48,7 +62,7 @@ public class PlayerController : MonoBehaviour
 
     }
 
-    // Update is called once per frame
+    // FixedUpdate is called once per frame
     void FixedUpdate()
     {
         if (Input.GetKey("up") || Input.GetKey("down") || Input.GetKey("left") || Input.GetKey("right"))
@@ -97,10 +111,15 @@ public class PlayerController : MonoBehaviour
         healthText.text = "Health: " + health;
     }
 
+    /// <summary>
+    /// Method that waits a few seconds before restarting
+    /// the game
+    /// </summary>
+    /// <param name="seconds"> Seconds to wait </param>
+    /// <returns> WaitForSeconds in real time </returns>
     IEnumerator LoadScene(float seconds)
     {
         yield return new WaitForSeconds(seconds);
         SceneManager.LoadScene("maze");
     }
-
 }
