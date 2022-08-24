@@ -59,6 +59,7 @@ public class MainMenu : MonoBehaviour
         Debug.Log("Quit Game");
     }
 
+/*
     /// <summary>
     /// Method to activate OnClick Events
     /// </summary>
@@ -68,9 +69,10 @@ public class MainMenu : MonoBehaviour
         OptMenu.SetActive(true);
     }
 
-    public void OnClockBack()
+    public void OnClickBack()
     {
         OptMenu.SetActive(false);
         Menu.SetActive(true);
     }
+    */
 }
