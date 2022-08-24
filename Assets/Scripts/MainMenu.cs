@@ -43,8 +43,8 @@ public class MainMenu : MonoBehaviour
         }
         else
         {
-            trapMat.color = Color.red;
-            goalMat.color = Color.green;
+            trapMat.color = new Color(255, 0, 0, 255);
+            goalMat.color = new Color(0, 255, 0, 255);
             SceneManager.LoadScene("maze");
         }
 
