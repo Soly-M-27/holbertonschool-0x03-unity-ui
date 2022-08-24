@@ -324,9 +324,9 @@ MonoBehaviour:
   Menu: {fileID: 1628242728}
   OptButton: {fileID: 980847911}
   BackButton: {fileID: 232688300}
-  trapMat: {fileID: 0}
-  goalMat: {fileID: 0}
-  colorblindMode: {fileID: 0}
+  trapMat: {fileID: 2100000, guid: 6f33092d051afaf47ab5a1b75c4aa138, type: 2}
+  goalMat: {fileID: 2100000, guid: 803f097820c07a845b156732a12fb8a2, type: 2}
+  colorblindMode: {fileID: 1653419821}
 --- !u!114 &232688303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1916,7 +1916,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 0, y: -15}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2140505138
