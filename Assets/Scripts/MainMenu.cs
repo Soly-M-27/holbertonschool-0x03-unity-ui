@@ -10,10 +10,6 @@ public class MainMenu : MonoBehaviour
     public GameObject OptMenu;
     // Hold entire Main Menu Canvas
     public GameObject Menu;
-    // Holds the options button
-    public GameObject OptButton;
-    //Holds the back button
-    public GameObject BackButton;
     // Material trapMat
     public Material trapMat;
     // Material goalMat;
